@@ -1,17 +1,46 @@
 <!DOCTYPE html>
-<html ng-app="game">
+<html>
 <head>
     <title>Sortir Game</title>
 </head>
 <body>
-    <div ng-controller="GameController as game"></div>
-    
+    <div class="container">
 
-
-
-    <script src="app/modules/angular.min.js"></script>
-    <script src="app/modules/angular-ui-router.js"></script>
-    <script src="game.js"></script>
-    <script src="Game/gameController.js"></script>
+        <div class="logo_block">
+            <div class="logo_name" ng-model="logoName">SortirGame</div>
+            <div class="login_block">
+                <div class="user">
+                    <div class="user_face"><img src="/images/test.jpg"></div>
+                    <div class="user_name">Max Shishkov</div>    
+                </div>
+                <div class="user_score">1250</div>
+            </div>
+        </div>
+        
+        <div class="everything">
+            <!-- the game -->
+            <div class="the_game"></div>
+            <!-- or -->
+            <div class="main_part">
+                <ul class="main_menu">
+                    <li>Start<small>new game</small></li>
+                    <li>Join<small>choose game</small></li>
+                    <li>Users<small>ratings</small></li>
+                    <li>Chat<small>common</small></li>
+                </ul> 
+                <div class="route_content">
+                    <div class="start">
+                        <div class="title">Starting a new game</div>
+                        <div class=form"">
+                            <div class="game_name">Name: ________</div>
+                            <div class="game_autostart_count">Autostart count: 4</div>
+                            <div class="game_private">Is private?: yes/no </div>
+                        </div>
+                        <div class="">Start new game!</div>
+                    </div>            
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
