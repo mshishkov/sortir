@@ -2,6 +2,13 @@
 <html>
 <head>
     <title>Sortir Game</title>
+    <link href='https://fonts.googleapis.com/css?family=Exo+2:400,200,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="public/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="public/css/jquery-ui.css" rel="stylesheet" type="text/css">
+    <link href="public/css/styles.css" rel="stylesheet" type="text/css">
+    <script src="/public/js/jquery-1.12.4.min.js"></script>
+    <script src="/public/js/jquery-ui.js"></script>
+    <script src="/public/js/jquery_main.js"></script>
 </head>
 <body>
     <div class="container">
@@ -10,10 +17,10 @@
             <div class="logo_name" ng-model="logoName">SortirGame</div>
             <div class="login_block">
                 <div class="user">
-                    <div class="user_face"><img src="/images/test.jpg"></div>
                     <div class="user_name">Max Shishkov</div>    
+                    <div class="user_face"><img src="/public/images/test.jpg"></div>
                 </div>
-                <div class="user_score">1250</div>
+                <div class="user_score">Score: 1250</div>
             </div>
         </div>
         
@@ -23,21 +30,124 @@
             <!-- or -->
             <div class="main_part">
                 <ul class="main_menu">
-                    <li>Start<small>new game</small></li>
-                    <li>Join<small>choose game</small></li>
-                    <li>Users<small>ratings</small></li>
-                    <li>Chat<small>common</small></li>
+                    <li data-tab="start">Start<small>new game</small></li>
+                    <li class="active" data-tab="join">Join<small>choose game</small></li>
+                    <li data-tab="users">Users<small>ratings</small></li>
+                    <li data-tab="chat">Chat<small>common</small></li>
                 </ul> 
                 <div class="route_content">
+                    <!--START-->
                     <div class="start">
                         <div class="title">Starting a new game</div>
-                        <div class=form"">
-                            <div class="game_name">Name: ________</div>
-                            <div class="game_autostart_count">Autostart count: 4</div>
-                            <div class="game_private">Is private?: yes/no </div>
+                        <div class="form">
+                            <div class="game_name">Name: <input type="text" name="game_name"></div>
+                            <div class="game_bet">Bet: <span class="bet_range_cnt">50</span>
+                                <div id="bet_range"></div>
+                            </div>
+                            <div class="game_autostart_count">Autostart count: <span class="game_autostart_cnt">4</span>
+                                <div id="users_range"></div>
+                            </div>
+                            <div class="game_private">Is private?: 
+                                <input type="checkbox">
+                            </div>
+                            <div class="game_password">
+                                <input type="password">
+                            </div>
                         </div>
-                        <div class="">Start new game!</div>
-                    </div>            
+                        <div class="start_new_game">Start new game!</div>
+                    </div> 
+                    
+                    <!--JOIN-->
+                    <div class="join">
+                        <div class="table_resp">
+                            <div class="head">
+                                <div class="r_game_name">NAME</div>
+                                <div class="r_game_players">NUBMER OF PLAYERS</div>
+                                <div class="r_game_bet">BET</div>
+                                <div class="r_game_action">ACTION</div>
+                            </div>
+                            <div class="row">
+                                <div class="r_game_name">My cool game</div>
+                                <div class="r_game_players">Players 3(4)</div>
+                                <div class="r_game_bet">Bet</div>
+                                <div class="r_game_action">Join</div>
+                            </div>
+                            <div class="row">
+                                <div class="r_game_name">My cool game</div>
+                                <div class="r_game_players">Players 3(4)</div>
+                                <div class="r_game_bet">Bet</div>
+                                <div class="r_game_action">Join</div>
+                            </div>
+                            <div class="row">
+                                <div class="r_game_name">My cool game</div>
+                                <div class="r_game_players">Players 3(4)</div>
+                                <div class="r_game_bet">Bet</div>
+                                <div class="r_game_action">Join</div>
+                            </div>
+                            <div class="row">
+                                <div class="r_game_name">My cool game</div>
+                                <div class="r_game_players">Players 3(4)</div>
+                                <div class="r_game_bet">Bet</div>
+                                <div class="r_game_action">Join</div>
+                            </div>
+                            <div class="row">
+                                <div class="r_game_name">My cool game</div>
+                                <div class="r_game_players">Players 3(4)</div>
+                                <div class="r_game_bet">Bet</div>
+                                <div class="r_game_action">Join</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--USERS-->
+                    <div class="users">
+                        <div class="title">User's ratings</div>
+                        <div class="table_resp">
+                            <div class="row">
+                                <div class="r_user_name">Alan Silvestry</div>
+                                <div class="r_user_total_games">1241</div>
+                                <div class="r_user_score">54120</div>
+                            </div>
+                            <div class="row">
+                                <div class="r_user_name">Jim Carry</div>
+                                <div class="r_user_total_games">850</div>
+                                <div class="r_user_score">53000</div>
+                            </div>
+                            <div class="row">
+                                <div class="r_user_name">Kate Mobile</div>
+                                <div class="r_user_total_games">2413</div>
+                                <div class="r_user_score">52800</div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <!--CHAT-->
+                    <div class='chat'>
+                        <div class="title">Common room <small>65 players online</small></div>
+                        <div class='chat_block'>
+                            <div class='chat_field'></div>
+                            <div class='chat_users'>
+                                <div class='c_user_name'>Some user</div>
+                                <div class='c_user_name'>Another one</div>
+                                <div class='c_user_name'>Call me</div>
+                                <div class='c_user_name'>Bogdan</div>
+                                <div class='c_user_name'>Artyom</div>
+                                <div class='c_user_name'>Lisa</div>
+                                <div class='c_user_name'>Max</div>
+                                <div class='c_user_name'>Some user</div>
+                                <div class='c_user_name'>Another one</div>
+                                <div class='c_user_name'>Call me</div>
+                                <div class='c_user_name'>Bogdan</div>
+                                <div class='c_user_name'>Artyom</div>
+                                <div class='c_user_name'>Lisa</div>
+                            </div>
+                            <div class='chat_line'>
+                                <input type="text" name="send_line">
+                                <div class="chat_send">Send</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

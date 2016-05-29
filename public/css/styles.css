@@ -1,0 +1,254 @@
+body > .container{
+    width: 800px;
+    padding: 30px;
+    background: url(/public/images/bg.jpg) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    color: #fff;
+    position: relative;
+    font-family: 'Exo 2', sans-serif;
+    min-height: 600px;
+}
+.logo_name {
+    font-size: 40px;
+    font-family: fantasy;
+}
+.login_block {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.user .user_face {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 30px;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.user_face img{
+    width: 100%;
+}
+.user .user_name{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+}
+.main_menu{
+    padding: 0;
+    display: table;
+    width: 100%;
+}
+.main_menu li{
+   display: table-cell;
+   width: 25%;
+   padding: 10px;
+   vertical-align: top;
+   text-align: center;
+   cursor: pointer;
+   transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -webkit-transition: all 0.3s ease-in-out;
+}
+.main_menu li:hover,
+.main_menu li.active{
+    background: rgba(255,255,255,0.3);
+}
+.main_menu li small{
+    display: block;
+    width: 100%;
+}
+.route_content {
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0px 0px 7px 1px rgba(255,255,255,0.3);
+}
+.route_content > div{
+    display: none;
+}
+.route_content > .join{
+    display: block;
+}
+.route_content .title {
+    padding: 10px 0 10px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    background: cadetblue;
+}
+.route_content > .start .form{
+    width: 400px;
+    margin: 0 auto;
+    padding: 15px;
+}
+.route_content > .start .form > div{
+    position: relative;
+    padding-bottom: 20px;
+}
+.route_content > .start input,
+.route_content > .start select{
+    position: absolute;
+    left: 150px;
+}
+.route_content > .start input[type=text]{
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+.game_password input{
+    display: none;
+}
+.route_content .start_new_game{
+    margin: 40px auto;
+    width: 180px;
+    background: rgba(80,255,80,0.3);
+    border: 1px solid rgba(255,255,255,0.3);
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+.route_content .start_new_game:hover{
+    background: rgba(80,255,80,0.5);
+}
+
+.route_content > .join .table_resp,
+.route_content > .users .table_resp{
+    padding: 0 15px;
+}
+.route_content > .join .table_resp .row,
+.route_content > .join .table_resp .head,
+.route_content > .users .table_resp .row{
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 5px 0;
+    transition: all 0.2s ease-in-out;
+   -o-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+   -webkit-transition: all 0.2s ease-in-out;
+}
+.route_content > .join .table_resp .row:nth-child(odd),
+.route_content > .users .table_resp .row:nth-child(odd){
+    background:  rgba(255,255,255,0.1);
+}
+.route_content > .join .table_resp .row:hover,
+.route_content > .users .table_resp .row:hover{
+    background: rgba(255,255,255,0.3);
+}
+.route_content > .join .table_resp .head{
+    margin-left: -15px;
+    margin-right: -15px;
+    background: cadetblue;
+    text-align: center;
+}
+
+.route_content > .join .table_resp .row > div,
+.route_content > .join .table_resp .head > div,
+.route_content > .users .table_resp .row > div{
+    float: left;
+    box-sizing: border-box;
+    padding: 3px 5px;
+}
+.r_game_name{
+    width: 55%;
+}
+.r_game_players{
+    width: 25%;
+    text-align: center;
+}
+.r_game_bet{
+    width: 10%;
+    text-align: center;
+}
+.r_game_action{
+    width: 10%;
+    text-align: center;
+}
+.r_user_name{
+    width:70%;
+}
+.r_user_total_games{
+    width:15%;
+}
+.r_user_score{
+    width:15%;
+}
+.chat_block{
+    padding: 0px 15px 25px 15px;
+    margin-top: -20px;
+    height: 400px;
+}
+.chat_users,
+.chat_field,
+.chat_line{
+    float: left;
+}
+.chat_users {
+    width: 20%;
+    padding: 15px 0 15px 10px;
+    border-left: 1px solid rgba(255,255,255,0.3);
+    box-sizing: border-box;
+    height: 100%;
+    overflow: auto; 
+}
+.chat_field {
+    width: 80%;
+    min-height: 1px;
+    box-sizing: border-box;
+    padding: 15px 10px;
+    overflow: auto; 
+}
+.chat_line{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.28);
+    margin-left: -15px;
+    padding: 3px 15px;
+    color: #FFF;
+    position: relative;
+}
+.chat_line input{
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    color: #fff;
+}
+.chat_line .chat_send{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 3px;
+    width: 50px;
+    background: rgba(80,255,80,0.3);
+    cursor: pointer;
+    text-align: center;
+}
+#users_range,
+#bet_range{
+    float: right;
+    width: 56%;
+    position: absolute;
+    left: 150px;
+    top: 3px;
+    background: rgba(80,255,80,0.5);
+}
+.ui-slider-horizontal .ui-slider-range-min{
+    background: none;
+}
+.ui-slider-horizontal .ui-slider-range-max{
+    background: none;
+}
+input[type=checkbox]{
+    width: 20px;
+    height: 20px;
+}
+.ui-state-default, 
+.ui-widget-content .ui-state-default, 
+.ui-widget-header .ui-state-default{
+    border: none;
+    font-weight: normal;
+    color: #555555;
+    background: white;
+    border-radius: 24px;
+    outline: none;
+}
