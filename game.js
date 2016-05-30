@@ -9,7 +9,8 @@ angular
     $stateProvider
         .state('home', {
             url: '/',
-            templateUrl: 'Game/index.html'
+            templateUrl: 'Game/index.html',
+            controller: 'GameController as game'
         })
         .state('gameplay', {
             url: '/',
