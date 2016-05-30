@@ -10,7 +10,7 @@
 <body ng-app="gameApp">
     <div class="container">
         <div class="logo_block">
-            <div class="logo_name" ng-model="logoName">SortirGame</div>
+            <div class="logo_name">SortirGame</div>
             <div class="login_block">
                 <div class="user">
                     <div class="user_name">Max Shishkov</div>    
@@ -23,9 +23,15 @@
             <div ui-view></div>
         </div>
     </div>
+    
+    <script src="/public/js/jquery-1.12.4.min.js"></script>
+    <script src="/public/js/jquery-ui.js"></script>
     <script src="app/modules/angular.min.js"></script>
     <script src="app/modules/angular-ui-router.js"></script>
+    <script src="app/modules/slider.js"></script>
     <script src="game.js"></script>
     <script src="Game/gameController.js"></script>
+    <script src="Game/menuController.js"></script>
+    <script src="Game/Start/StartController.js"></script>
 </body>
 </html>

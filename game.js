@@ -10,7 +10,7 @@ angular
         .state('home', {
             url: '/',
             templateUrl: 'Game/index.html',
-            controller: 'GameController as game'
+//            controller: 'GameController as game'
         })
         .state('gameplay', {
             url: '/',
@@ -19,22 +19,34 @@ angular
         .state('home.start', {
             url: '/start',
             templateUrl: 'Game/Start/startView.html', 
-            // controller: 'StartController as start'
+            // controller: 'StartController as start',
+            data: {
+                menuClass: 'start'
+            }
         })
         .state('home.join', {
             url: '/join',
             templateUrl: 'Game/Join/joinView.html', 
-            // controller: 'JoinController as join'
+            // controller: 'JoinController as join',
+            data: {
+                menuClass: 'join'
+            }
         })
         .state('home.users', {
             url: '/users',
             templateUrl: 'Game/Users/usersView.html', 
-            // controller: 'UsersController as users'
+            // controller: 'UsersController as users',
+            data: {
+                menuClass: 'users'
+            }
         })
         .state('home.chat', {
             url: '/chat',
             templateUrl: 'Game/Chat/chatView.html', 
-            // controller: 'ChatController as chat'
+            // controller: 'ChatController as chat',
+            data: {
+                menuClass: 'chat'
+            }
         })
         ;
 });

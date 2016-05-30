@@ -51,6 +51,13 @@ body > .container{
    -moz-transition: all 0.3s ease-in-out;
    -webkit-transition: all 0.3s ease-in-out;
 }
+.main_menu li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-decoration: none;
+}
 .main_menu li:hover,
 .main_menu li.active{
     background: rgba(255,255,255,0.3);

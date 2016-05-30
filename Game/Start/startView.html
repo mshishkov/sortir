@@ -1,13 +1,17 @@
 <!--START-->
-<div class="start">
+<div class="start" ng-controller="StartController as start">
     <div class="title">Starting a new game</div>
     <div class="form">
         <div class="game_name">Name: <input type="text" name="game_name"></div>
         <div class="game_bet">Bet: <span class="bet_range_cnt">50</span>
             <div id="bet_range"></div>
+            <div ui-slider="{orientation: 'vertical', range: 'min'}"  min="50" max="start.maxCoins" step="25" ng-model="start.betRange"></div>
+
         </div>
         <div class="game_autostart_count">Autostart count: <span class="game_autostart_cnt">4</span>
             <div id="users_range"></div>
+             <!--<div ui-slider="{orientation: 'vertical', range: 'min'}"  min="0" max="25" step="5" ng-model="start.autostartCount"></div>-->
+
         </div>
         <div class="game_private">Is private?: 
             <input type="checkbox">
