@@ -1,13 +1,31 @@
 <!DOCTYPE html>
-<html ng-app="game">
+<html>
 <head>
     <title>Sortir Game</title>
+    <link href='https://fonts.googleapis.com/css?family=Exo+2:400,200,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="public/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="public/css/jquery-ui.css" rel="stylesheet" type="text/css">
+    <link href="public/css/styles.css" rel="stylesheet" type="text/css">
 </head>
-<body>
-    <div ng-controller="GameController as game"></div>
+<body ng-app="gameApp">
+    <div class="container">
+        <div class="logo_block">
+            <div class="logo_name" ng-model="logoName">SortirGame</div>
+            <div class="login_block">
+                <div class="user">
+                    <div class="user_name">Max Shishkov</div>    
+                    <div class="user_face"><img src="/public/images/test.jpg"></div>
+                </div>
+                <div class="user_score">Score: 1250</div>
+            </div>
+        </div>
+        <div class="everything">
+            <div ui-view></div>
+        </div>
+    </div>
     <script src="app/modules/angular.min.js"></script>
     <script src="app/modules/angular-ui-router.js"></script>
     <script src="game.js"></script>
-    <script src="Game/gameController.js"></script>
+    <!-- <script src="Game/gameController.js"></script> -->
 </body>
 </html>

@@ -64,10 +64,10 @@ body > .container{
     box-shadow: 0px 0px 7px 1px rgba(255,255,255,0.3);
 }
 .route_content > div{
-    display: none;
+    /*display: none;*/
 }
 .route_content > .join{
-    display: block;
+    /*display: block;*/
 }
 .route_content .title {
     padding: 10px 0 10px 20px;
