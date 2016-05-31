@@ -6,7 +6,6 @@ angular
 
 StartController.$injector = [
     '$scope',
-    'ui.slider'
 ];
 
 function StartController($scope) {

@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-.module('gameApp', ['ui.router'])
+.module('gameApp', ['ui.router', 'ui.slider'])
 .config(function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/');
