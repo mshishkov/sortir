@@ -4,15 +4,16 @@ angular
     .module('gameApp')
     .controller('UsersController', UsersController);
 
-// UsersController.$injector = [
-//     $scope, $http, 'UsersModel'
-// ];
+UsersController.$injector = [
+    '$scope', 'UsersModel'
+];
 
-function UsersController($scope, $http, 'UsersModel') {
+function UsersController($scope, UsersModel) {
     var gm = this;
 
     // definitions
-    // gm.Users = UsersModel.index();
+    gm.Users = [];
+    // UsersModel.index();
 
 
 };

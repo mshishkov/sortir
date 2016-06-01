@@ -1,5 +1,8 @@
 'use strict';
 
+// define global API root path
+var PATH_API = '/api/';
+
 angular
 .module('gameApp', ['ui.router', 'ui.slider'])
 .config(function($stateProvider, $urlRouterProvider) {
