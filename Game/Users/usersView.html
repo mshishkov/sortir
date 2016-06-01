@@ -1,22 +1,11 @@
 <!--USERS-->
-<div class="users">
+<div class="users" ng-controller="UsersController as gm">
     <div class="title">User's ratings</div>
     <div class="table_resp">
-        <div class="row">
-            <div class="r_user_name">Alan Silvestry</div>
-            <div class="r_user_total_games">1241</div>
-            <div class="r_user_score">54120</div>
+        <div class="row" ng-repeat="user in gm.Users">
+            <div class="r_user_name">{{user.user_name}}</div>
+            <div class="r_user_total_games">{{user.user_games}}</div>
+            <div class="r_user_score">{{user.user_score}}</div>
         </div>
-        <div class="row">
-            <div class="r_user_name">Jim Carry</div>
-            <div class="r_user_total_games">850</div>
-            <div class="r_user_score">53000</div>
-        </div>
-        <div class="row">
-            <div class="r_user_name">Kate Mobile</div>
-            <div class="r_user_total_games">2413</div>
-            <div class="r_user_score">52800</div>
-        </div>
-        
     </div>
 </div>
