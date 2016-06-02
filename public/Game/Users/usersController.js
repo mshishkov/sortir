@@ -12,8 +12,7 @@ function UsersController($scope, UsersModel) {
     var gm = this;
 
     // definitions
-    gm.Users = [];
-    // UsersModel.index();
+    gm.Users = UsersModel.index();
 
 
 };

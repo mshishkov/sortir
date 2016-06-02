@@ -4,7 +4,7 @@
 var PATH_API = '/api/';
 
 angular
-.module('gameApp', ['ui.router', 'ui.slider'])
+.module('gameApp', ['ui.router', 'ui.slider','ngResource'])
 .config(function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/');

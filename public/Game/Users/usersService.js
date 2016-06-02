@@ -2,7 +2,13 @@
 
 angular
 .module('gameApp')
-.service('UsersModel', function ($resource, PATH_API) {
+.service('UsersModel', UserModelService);
+
+UserModelService.$injector = [
+    '$resource'
+];
+
+function UserModelService($resource){
     return $resource(PATH_API + 'users/:param1/:param2', {}, {
         index  : { method: 'GET', isArray: true },
         // create : { method: 'GET', params: {param1: 'create'} },
@@ -12,5 +18,4 @@ angular
         update : { method: 'PUT', params: {param1: '@id'} },
         // destroy: { method: 'DELETE', params: {param1: '@id'} }
     });
-
-});
+}
